@@ -4,7 +4,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { useTheme } from "../context/ThemeContext";
-import { QRCodeCanvas } from "qrcode.react";
 import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import "./Dashboard.css";
 
@@ -43,7 +42,6 @@ const Dashboard = () => {
                 <a href={userData.socials.instagram} target="_blank" rel="noopener noreferrer">
                   <FaInstagram size={24} />
                 </a>
-                <QRCodeCanvas value={userData.socials.instagram} size={64} />
               </div>
             )}
             {userData.socials?.twitter && (
@@ -51,7 +49,6 @@ const Dashboard = () => {
                 <a href={userData.socials.twitter} target="_blank" rel="noopener noreferrer">
                   <FaTwitter size={24} />
                 </a>
-                <QRCodeCanvas value={userData.socials.twitter} size={64} />
               </div>
             )}
             {userData.socials?.linkedin && (
@@ -59,7 +56,6 @@ const Dashboard = () => {
                 <a href={userData.socials.linkedin} target="_blank" rel="noopener noreferrer">
                   <FaLinkedin size={24} />
                 </a>
-                <QRCodeCanvas value={userData.socials.linkedin} size={64} />
               </div>
             )}
           </div>
