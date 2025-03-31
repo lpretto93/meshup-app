@@ -1,0 +1,99 @@
+
+/* App.css */
+
+/* Light Mode */
+:root {
+  --bg-primary: #f7faff;
+  --bg-secondary: #ffffff;
+  --bg-hover: #e5e9f0;
+  --text-primary: #003366; /* blu logo */
+  --text-accent: #003366; /* pulsanti blu logo */
+  --border-color: #ccd6dd;
+
+  --input-bg: #ffffff;
+  --input-border: #ccd1d9;
+  --input-text: #003366;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #2b2b2b;
+  --bg-hover: #3a3a3a;
+  --text-primary: #f0f0f0;
+  --text-accent: #7baaf7;
+  --border-color: #555;
+
+  --input-bg: #2a2a2a;
+  --input-border: #666;
+  --input-text: #e0e0e0;
+}
+
+/* MeshUp Mode - elegante */
+body.meshup-mode {
+  --bg-primary: #f1c6d8;
+  --bg-secondary: #003366;
+  --bg-hover: #4a5974;
+  --text-primary: #ffffff;
+  --text-accent: #b5a8d6; /* lavanda elegante */
+  --border-color: #998cb5;
+
+  --input-bg: #1e2d45;
+  --input-border: #8d90b3;
+  --input-text: #ffffff;
+}
+
+/* Base styles */
+body {
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+input, textarea, select {
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--text-accent);
+}
+
+button {
+  background-color: var(--text-accent);
+  color: var(--bg-secondary);
+  padding: 10px 20px;
+  border: none;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--bg-hover);
+}
+
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+  color: var(--text-primary);
+}

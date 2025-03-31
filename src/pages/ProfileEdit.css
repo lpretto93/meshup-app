@@ -1,0 +1,109 @@
+
+/* ProfileEdit.css - versione professionale */
+
+.profile-edit {
+  padding: 3rem 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--text-accent);
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+input,
+textarea {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  padding: 14px 16px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.profile-edit button {
+  background-color: var(--text-accent);
+  color: var(--bg-secondary);
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-edit button:hover {
+  background-color: var(--bg-hover);
+}
+
+.cancel-button {
+  background-color: transparent;
+  color: var(--text-accent);
+  border: 2px solid var(--text-accent);
+}
+
+.cancel-button:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Tema Selector */
+.mode-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+}
+
+.mode-selector label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-secondary);
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.mode-selector input[type="radio"] {
+  accent-color: var(--text-accent);
+}

@@ -1,0 +1,75 @@
+/* Base globale con supporto Light e Dark Mode */
+:root {
+  --bg-primary: #f7f8fc;
+  --bg-secondary: #ffffff;
+  --bg-hover: #f0f2f5;
+  --text-primary: #1d1d1d;
+  --text-accent: #3a6ea5;
+  --border-color: #e1e4ea;
+
+  --input-bg: #ffffff;
+  --input-border: #ccd1d9;
+  --input-text: #333;
+}
+
+body.dark-mode {
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #2a2a3a;
+  --bg-hover: #34344c;
+  --text-primary: #f0f0f0;
+  --text-accent: #a3c0ff;
+  --border-color: #444;
+
+  --input-bg: #2a2a3a;
+  --input-border: #555;
+  --input-text: #ddd;
+}
+
+/* Stile generico applicabile ovunque */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+input, textarea, select {
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--text-accent);
+}
+
+button {
+  background-color: var(--text-accent);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2e5984;
+}
+
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}

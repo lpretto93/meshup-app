@@ -1,0 +1,55 @@
+/* AvatarMenu.css */
+
+.avatar-menu-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.avatar-image:hover {
+  transform: scale(1.05);
+}
+
+.avatar-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 0.5rem;
+  min-width: 160px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.avatar-menu-wrapper:hover .avatar-dropdown {
+  display: flex;
+}
+
+.avatar-dropdown a,
+.avatar-dropdown button {
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.avatar-dropdown a:hover,
+.avatar-dropdown button:hover {
+  background-color: var(--bg-hover);
+}

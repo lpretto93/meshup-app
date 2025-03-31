@@ -1,0 +1,92 @@
+/* index.css */
+
+/* Variabili globali per il tema */
+:root {
+  --bg-primary: #f7f8fc;           /* Sfondo chiaro */
+  --bg-secondary: #e1e4ea;         /* Sfondo sidebar più scuro */
+  --bg-hover: #f0f2f5;             /* Colore hover (leggero) chiaro */
+  --text-primary: #1d1d1d;         /* Colore del testo */
+  --text-accent: #3a6ea5;          /* Colore dei link (accento) */
+  --border-color: #e1e4ea;         /* Colore dei bordi */
+
+  --input-bg: #ffffff;             /* Sfondo degli input */
+  --input-border: #ccd1d9;         /* Bordo degli input */
+  --input-text: #333;              /* Testo degli input */
+
+  --hover-color: #003366;          /* Blu Navy per Light Mode */
+}
+
+body.dark-mode {
+  --bg-primary: #1e1e2e;           /* Sfondo scuro */
+  --bg-secondary: #2a2a3a;         /* Sfondo sidebar più scuro */
+  --bg-hover: #34344c;             /* Colore hover scuro */
+  --text-primary: #f0f0f0;         /* Colore del testo in dark mode */
+  --text-accent: #a3c0ff;          /* Colore dei link (accento) */
+  --border-color: #444;            /* Colore dei bordi scuri */
+
+  --input-bg: #2a2a3a;             /* Sfondo input scuro */
+  --input-border: #555;            /* Bordo degli input scuro */
+  --input-text: #ddd;              /* Testo degli input scuro */
+
+  --hover-color: #ff6347;          /* Arancio per Dark Mode */
+}
+
+/* Stile generale per il body */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+/* Hover generico per tutti i bottoni */
+button {
+  background-color: var(--text-accent);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2e5984; /* Hover default */
+}
+
+/* Hover nelle sidebar */
+.sidebar .nav-links li a:hover,
+.sidebar .social-links a:hover,
+.sidebar .profile-menu ul li a:hover,
+.sidebar .profile-menu ul li button:hover {
+  color: var(--hover-color); /* Colore di hover (variabile) */
+}
+
+/* Form elements */
+input, textarea, select {
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--text-accent);
+}
+
+/* Card Styling */
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
