@@ -41,6 +41,7 @@ const Sidebar = () => {
           className="avatar-wrapper"
           onMouseEnter={() => setIsProfileMenuOpen(true)}
           onMouseLeave={() => setIsProfileMenuOpen(false)}
+          onClick={() => setIsProfileMenuOpen(prev => !prev)}
         >
           <div className="avatar-section">
             <img
@@ -49,7 +50,11 @@ const Sidebar = () => {
               className="avatar-img"
             />
           </div>
-          <div className={`profile-menu ${isProfileMenuOpen ? "visible" : ""}`}>
+          <div
+            className={`profile-menu ${isProfileMenuOpen ? "visible" : ""}`}
+            onMouseEnter={() => setIsProfileMenuOpen(true)}
+            onMouseLeave={() => setIsProfileMenuOpen(false)}
+          >
             <ul>
               <li><Link to="/profile/edit">Modifica Profilo</Link></li>
               <li><Link to="/profile/share">Condividi Profilo</Link></li>
